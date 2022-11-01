@@ -1,13 +1,16 @@
-package com.api.Parkingcontrol.services;
+package com.api.Parkingcontrol.Services;
 
-import org.springframework.stereotype.service;
+import org.springframework.stereotype.Service;
+
+import com.api.Parkingcontrol.models.ParkingSpotModel;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 
 
-@service
+@Service
 public class ParkingSpotService{
 
     @Autowired
-    ParkingSpotRepository ParkingSpotRepository;
+    ParkingSpotModel ParkingSpotRepository;
 }

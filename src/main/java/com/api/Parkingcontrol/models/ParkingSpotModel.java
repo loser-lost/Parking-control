@@ -1,6 +1,10 @@
 /*Classe estacionamento */
 package com.api.Parkingcontrol.models;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -13,35 +17,35 @@ public class ParkingSpotModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /*Crinado uma tablela com as especificações */
-    @id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     /* ------------*/
-    @column( nullable = false, unique = true, length = 10)
+    @Column( nullable = false, unique = true, length = 10)
     private String ParkingSpotNumber;
     /*------------ */
-    @column( nullable = false, unique = true, length = 7)
+    @Column( nullable = false, unique = true, length = 7)
     private String LicencePlateCar;
     /*------------ */
-    @column( nullable = false, length = 70)
+    @Column( nullable = false, length = 70)
     private String brandCar;
     /*------------ */
-    @column( nullable = false, length = 70)
+    @Column( nullable = false, length = 70)
     private String modelCar;
     /*------------ */
-    @column( nullable = false, length = 70)
+    @Column( nullable = false, length = 70)
     private String collorCar;
     /*------------ */
-    @column( nullable = false)
+    @Column( nullable = false)
     private LocalDateTime registrationDate;
     /*------------ */
-    @column( nullable = false, length = 130)
+    @Column( nullable = false, length = 130)
     private String ResponsibleName;
     /*------------ */
-    @column( nullable = false, length = 30)
+    @Column( nullable = false, length = 30)
     private String Apartment;
     /*------------ */
-    @column( nullable = false, length = 30)
+    @Column( nullable = false, length = 30)
     private String block;
     /*----------------------------------- */
     
@@ -91,12 +95,12 @@ public class ParkingSpotModel implements Serializable {
         this.collorCar = collorCar;
     }
 /* ----------------------------------------------------------------------*/
-    public String registrationDate(){
+    public LocalDateTime registrationDate(){
         return registrationDate;
     }
     /*Provalvelmete esta errado, afinal o item a receber o valor nao e uma String
     mas sim um:LocalDateTime */
-    public void setregistrationDate(String registrationDate){
+    public void setregistrationDate(LocalDateTime registrationDate){
         this.registrationDate = registrationDate;
     }
 /* ----------------------------------------------------------------------*/
