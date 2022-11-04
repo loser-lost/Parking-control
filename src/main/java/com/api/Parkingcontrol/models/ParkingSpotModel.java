@@ -16,13 +16,15 @@ import java.util.UUID;
 public class ParkingSpotModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    private static final String Apartiment = null;
+
     /*Crinado uma tablela com as especificações */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     /* ------------*/
     @Column( nullable = false, unique = true, length = 10)
-    private String ParkingSpotNumber;
+    private String parkingSpotNumber;
     /*------------ */
     @Column( nullable = false, unique = true, length = 7)
     private String LicencePlateCar;
@@ -40,10 +42,13 @@ public class ParkingSpotModel implements Serializable {
     private LocalDateTime registrationDate;
     /*------------ */
     @Column( nullable = false, length = 130)
-    private String ResponsibleName;
+    private String responsibleName;
     /*------------ */
     @Column( nullable = false, length = 30)
-    private String Apartment;
+    private String apartiment;
+    public ParkingSpotModel(String apartiment) {
+        this.apartiment = apartiment;
+    }
     /*------------ */
     @Column( nullable = false, length = 30)
     private String block;
@@ -58,10 +63,10 @@ public class ParkingSpotModel implements Serializable {
     }
 /*-------------------------------------------------------------------- */
     public String getParkingSpotNumber(){
-        return ParkingSpotNumber;
+        return parkingSpotNumber;
     }
     public void setParkingSpotNumber(String ParkingSpotNumber){
-        this.ParkingSpotNumber = ParkingSpotNumber;
+        this.parkingSpotNumber = ParkingSpotNumber;
     }
 /*-------------------------------------------------------------------- */
 
@@ -105,17 +110,18 @@ public class ParkingSpotModel implements Serializable {
     }
 /* ----------------------------------------------------------------------*/
     public String getResponsibleName(){
-        return ResponsibleName;
+        return responsibleName;
     }
     public void setResponsibleName(String ResponsibleName){
-        this.ResponsibleName = ResponsibleName;
+        this.responsibleName = ResponsibleName;
     }
 /* ----------------------------------------------------------------------*/
     public String getApartment(){
-        return Apartment;
+        return apartiment;
     }
+   
     public void setApartment(String Apartment){
-        this.Apartment = Apartment;
+        this.apartiment = Apartiment;
     }
 /* ----------------------------------------------------------------------*/
     public String getblock(){
