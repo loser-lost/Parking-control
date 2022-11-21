@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.UUID;
 
 @Entity /*Torna a classe uma identidade */
@@ -39,7 +39,7 @@ public class ParkingSpotModel implements Serializable {
     private String collorCar;
     /*------------ */
     @Column( nullable = false)
-    private LocalDateTime registrationDate;
+    private LocalTime registrationDate;
     /*------------ */
     @Column( nullable = false, length = 130)
     private String responsibleName;
@@ -100,13 +100,13 @@ public class ParkingSpotModel implements Serializable {
         this.collorCar = collorCar;
     }
 /* ----------------------------------------------------------------------*/
-    public LocalDateTime registrationDate(){
+    public LocalTime registrationDate(){
         return registrationDate;
     }
     /*Provalvelmete esta errado, afinal o item a receber o valor nao e uma String
     mas sim um:LocalDateTime */
-    public void setregistrationDate(LocalDateTime registrationDate){
-        this.registrationDate = registrationDate;
+    public void setregistrationDate(LocalTime localTime){
+        this.registrationDate = localTime;
     }
 /* ----------------------------------------------------------------------*/
     public String getResponsibleName(){

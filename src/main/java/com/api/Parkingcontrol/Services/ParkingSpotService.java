@@ -3,6 +3,7 @@ package com.api.Parkingcontrol.Services;
 import org.springframework.stereotype.Service;
 
 import com.api.Parkingcontrol.Repositers.ParkingSpotRepository;
+import com.api.Parkingcontrol.models.ParkingSpotModel;
 
 
 
@@ -13,5 +14,9 @@ public class ParkingSpotService{
 
         public ParkingSpotService(ParkingSpotRepository parkingSpotRepository){
             this.parkingSpotRepository = parkingSpotRepository;
+        }
+
+        public Object save(ParkingSpotModel parkingSpotModel) {
+            return null;
         }
 }
