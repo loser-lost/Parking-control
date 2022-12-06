@@ -1,5 +1,6 @@
 package com.api.Parkingcontrol.Services;
 
+import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.api.Parkingcontrol.Repositers.ParkingSpotRepository;
@@ -34,7 +35,7 @@ public class ParkingSpotService{
         public boolean existsByApartimentAndBlock(String Apartment, String Block){
             return parkingSpotRepository.existsByApartimentAndBlock(Apartment, Block);
         }
-        public List<ParkingSpotModel> findALL(){
+        public List<ParkingSpotModel> findALL(Pageable pageable){
             return parkingSpotRepository.findAll();
         }
         public Optional<ParkingSpotModel> findById(UUID id) {

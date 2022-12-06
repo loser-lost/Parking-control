@@ -70,7 +70,7 @@ public class ParkingSpotModel implements Serializable {
     }
 /*-------------------------------------------------------------------- */
 
-    public String LicencePlateCar(){
+    public String getLicencePlateCar(){
         return LicencePlateCar;
     }
     public void setLicencePlateCar(String LicencePlateCar){
@@ -100,7 +100,7 @@ public class ParkingSpotModel implements Serializable {
         this.collorCar = collorCar;
     }
 /* ----------------------------------------------------------------------*/
-    public LocalTime registrationDate(){
+    public LocalTime getregistrationDate(){
         return registrationDate;
     }
     /*Provalvelmete esta errado, afinal o item a receber o valor nao e uma String

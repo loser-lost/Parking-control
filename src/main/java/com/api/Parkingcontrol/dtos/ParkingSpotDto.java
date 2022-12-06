@@ -33,7 +33,7 @@ public class ParkingSpotDto {
     }
 /*-------------------------------------------------------------------- */
 
-    public String LicencePlateCar(){
+    public String getLicencePlateCar(){
         return licencePlateCar;
     }
     public void setLicencePlateCar(String LicencePlateCar){
