@@ -101,35 +101,3 @@ A URL base para todos os endpoints é `/parking-spot`.
 * **Respostas:**
     * `200 OK`: Se a vaga for deletada com sucesso.
     * `404 NOT FOUND`: Se não existir vaga com o ID informado.
-
----
-
-## 🚀 Como Executar o Projeto
-
-1.  **Pré-requisitos:**
-    * **JDK 11** ou superior instalado.
-    * **Maven** ou **Gradle** instalado.
-    * Um servidor de banco de dados (ex: PostgreSQL) em execução.
-
-2.  **Passos:**
-    ```bash
-    # Clone o repositório
-    $ git clone [URL_DO_SEU_REPOSITORIO]
-
-    # Navegue até a pasta do projeto
-    $ cd [NOME_DA_PASTA]
-
-    # Configure o banco de dados no arquivo `src/main/resources/application.properties`
-    # Exemplo para PostgreSQL:
-    # spring.datasource.url=jdbc:postgresql://localhost:5432/parking_db
-    # spring.datasource.username=seu_usuario
-    # spring.datasource.password=sua_senha
-
-    # Execute a aplicação com o Maven
-    $ ./mvnw spring-boot:run
-
-    # Ou com o Gradle
-    $ ./gradlew bootRun
-    ```
-
-3.  A API estará disponível em `http://localhost:8080`.
